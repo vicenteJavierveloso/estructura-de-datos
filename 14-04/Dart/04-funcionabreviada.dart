@@ -4,7 +4,7 @@ main() {
   print(op1);
   print(op2);
 }
-
+//Las funciones flecha 
 int operacion(int a, int b, Function func) => func(a, b);
 int suma(int a, int b) => a + b;
 int resta(int a, int b) => a - b;
