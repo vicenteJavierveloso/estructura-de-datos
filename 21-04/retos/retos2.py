@@ -1,17 +1,21 @@
 from array import array
 import random
 
-matriz = []
-for i in range(5):
-    matriz.append(array('f', [0,0,0,0,0]))
+arreglo = array('f', [0,0,0,0,0,0,0,0,0,0])
+tamano = random.randint(10,30)
+for i in range(tamano):
+    arreglo.append(0)
+for i in range(len(arreglo)):
+    arreglo[i] = random.randint(0,9)
 
-for i in range(len(matriz)):
-    for o in range(len(matriz[0])):
-        matriz[i][o] = random.randint(0,5)
+print(arreglo)
 
-print(matriz)
+buscar = int(input("Elemento a buscar "))
 
-buscar_fila = int(input("Fila a buscar "))
-buscar_columna = int(input("Columna a buscar "))
-
-print(f"El elemento es {matriz[buscar_fila-1][buscar_columna-1]}")
+contador = 0
+indices = []
+for i in range(len(arreglo)):
+    if arreglo[i] == buscar:
+        contador += 1
+        indices.append(i)
+print(f"El elemento aparece {contador} veces, en los indices {indices}")
