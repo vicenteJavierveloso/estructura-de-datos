@@ -19,18 +19,11 @@ for i in range(n2):
     for j in range(m2):
         matriz2[i][j] = float(input(f"Elemento {i,j} matriz 2 "))
 
-def suma(a,b):
-    if a.shape != b.shape:
-        return "No pueden sumarse matrices con distinta forma."
-    else:
-        return a+b
-
-def resta(a,b):
-    if a.shape != b.shape:
-        return "No pueden restarse matrices con distinta forma."
-    else:
-        return a-b
 print(matriz1)
 print(matriz2)
-print(suma(matriz1,matriz2))
-print(resta(matriz1,matriz2))
+#Suma
+suma = np.add(matriz1,matriz2)
+#Resta
+resta = np.subtract(matriz1,matriz2)
+print(suma)
+print(resta)
