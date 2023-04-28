@@ -22,14 +22,17 @@ for i in range(n2):
 print(f"1 {matriz1}")
 print(f"2 {matriz2}")
 
-def suma(a,b):
-    if len(a) != len(b) or len(a[0]) != len(b[0]):
+def suma(c,d):
+    if len(c) != len(d) or len(c[0]) != len(d[0]):
         return "No se pueden sumar matrices de distinto tamaño."
     else:
-        for i in range(len(a)):
-            for j in range(len(a[0])):
-                a[i][j] = a[i][j]+b[i][j]
-        return a
+        matriz3 = []
+        for i in range(len(c)):
+            aux = []
+            for j in range(len(c[0])):
+                aux.append(operator.add(c[i][j],d[i][j]))
+            matriz3.append(aux)
+        return matriz3
 
 def resta(c,d):
     if len(c) != len(d) or len(c[0]) != len(d[0]):
@@ -39,14 +42,8 @@ def resta(c,d):
         for i in range(len(c)):
             aux = []
             for j in range(len(c[0])):
-                o = c[i][j]
-                p = d[i][j]
-                aux.append(operator.sub(o,p))
+                aux.append(operator.sub(c[i][j],d[i][j]))
             matriz3.append(aux)
-        # for i in range(len(c)):
-        #     for j in range(len(c[0])):
-        #         aux = c[i][j] - d[i][j]
-        #         matriz3[i][j] = aux
         return matriz3
     
 print(suma(matriz1,matriz2))
