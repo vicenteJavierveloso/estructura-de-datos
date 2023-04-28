@@ -47,5 +47,4 @@ def resta(c,d):
         return matriz3
     
 print(suma(matriz1,matriz2))
-#La resta no funciona
 print(resta(matriz1,matriz2))
