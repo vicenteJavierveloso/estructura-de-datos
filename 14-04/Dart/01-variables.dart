@@ -1,4 +1,6 @@
 //GUIA RAPIDA DE VARIABLES EN DART
+import 'dart:ffi';
+
 void main() {
   //Este es un comentario de una linea
 
@@ -71,7 +73,9 @@ void main() {
 
   //Accediendo a un elemento de la lista
   print(numeros[0]);
-
+  // tipo de elemento
+  var tipo = numeros.runtimeType;
+  print("El tipo de dato es $tipo");
   // Agregando un nuevo elemento a la lista (Númerico)
   numeros.add(6);
   print("Lista actualizada con el último elemento agregado: $numeros");
