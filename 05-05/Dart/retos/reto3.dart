@@ -24,5 +24,9 @@ void main() {
   // Aun no es una lista, luego el metodo .toList() lo
   lista = lista.reversed.toList();
   print("Orden descendente $lista");
+  int menor = lista[lista.length-1];
+  int mayor = lista[0];
+  print("Elemento mayor $mayor");
+  print("Elemento menor $menor");
 
 }
