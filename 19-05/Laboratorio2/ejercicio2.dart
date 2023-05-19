@@ -12,7 +12,7 @@ void main() {
     lista2.add(num);
   }
   for (int i = 0; i<5; i++) {
-    lista3.add(-1*(Random().nextInt(10)+16));
+    lista3.add(-1*(Random().nextInt(11)+15));
   }
   print("Lista 1 = $lista1");
   print("Lista 2 = $lista2");
