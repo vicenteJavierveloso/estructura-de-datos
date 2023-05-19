@@ -34,4 +34,6 @@ void main() {
   lista1.insert(0,24);
   lista1.insert(0,17);
   print("Se añade en la primera y segunda posicion 17 y 24 a la lista obtenida = $lista1");
+  lista1.sort();
+  print(lista1.reversed);
 }
