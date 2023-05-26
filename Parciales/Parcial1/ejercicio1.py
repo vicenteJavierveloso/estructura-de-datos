@@ -37,14 +37,14 @@ if np.shape(A)[1] == np.shape(A)[0]:
         #determinante de B para inversa
         if np.linalg.det(B) != 0:
             #ver si A^3 es multiplicable con inversa de B
-            if np.shape(np.dot(np.dot(A,A),A))[1] == np.shape(np.invert(B))[0]:
+            if np.shape(np.dot(np.dot(A,A),A))[1] == np.shape(np.linalg.inv(B))[0]:
                 #Si A^3*B^-1 es multiplicable con C
-                if np.shape(np.dot(np.dot(np.dot(A,A),A),np.invert(B)))[1] == np.shape(C)[0]:
+                if np.shape(np.dot(np.dot(np.dot(A,A),A),np.linalg.inv(B)))[1] == np.shape(C)[0]:
                     #determinante de A^3 para inversa
                     if np.linalg.det(np.dot(np.dot(A,A),A)) != 0:
-                        if np.shape(np.dot(np.dot(np.dot(np.dot(A,A),A),np.invert(B)),C)) == np.shape(np.invert(np.dot(np.dot(A,A),A))):
+                        if np.shape(np.dot(np.dot(np.dot(np.dot(A,A),A),np.linalg.inv(B)),C)) == np.shape(np.linalg.inv(np.dot(np.dot(A,A),A))):
                             #Resultado de (A^3*B^-1*C) + (A^3)^-1
-                            resultado = np.add(np.dot(np.dot(np.dot(np.dot(A,A),A),np.invert(B)),C), np.invert(np.dot(np.dot(A,A),A)))
+                            resultado = np.add(np.dot(np.dot(np.dot(np.dot(A,A),A),np.linalg.inv(B)),C), np.linalg.inv(np.dot(np.dot(A,A),A)))
                         else:
                             print(f"A^3*B^-1*C no puede ser sumado con (A^3)^-1")
                     else:
